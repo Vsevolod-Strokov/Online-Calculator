@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none; /* Часто вместе с отступами убирают и стандартную рамку */
+}
+
+
+body {
+    background-color: #303030;
+}
+
+p {
+    color: white;
+    font-family: sans-serif;
+}
+
+
+.calc {
+     margin-inline: 5%; 
+}
+
+
+.calc__frame {
+    margin-inline: auto;
+    margin-top: 5%;
+    /* height: 1%; */
+
+    /* width: 95%;           */
+    max-width: 500px;
+    font-size: 1.2rem; 
+    /* min-width: 500px; */
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+}
+
+
+.calc__frame-output {
+    margin: 10%;
+    padding-bottom: 5%;
+    /* padding-block: 40px; */
+    border-bottom: 1px solid white;
+
+    display: flex;
+    align-items: auto;
+
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.preview {
+    letter-spacing: 5%;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+}
+
+.output {
+    /* margin-right: 5%; */
+    font-size: 24px;
+}
+
+
+
+/* Кнопки */
+
+.calc__buttons {
+    margin: 20px;
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+
+.calc__buttons-button {
+    aspect-ratio: 1/1;
+    border-radius: 1000px;
+    font-weight: 700;
+    font-size: 32px;
+    outline: 3px solid rgb(93, 93, 93); 
+    transition: background-color 0.25s, opacity 0.4s;
+    color: #353c47;
+    transition: 0.3s;
+}
+
+.calc__buttons-button:hover {
+    background-color: rgb(220, 253, 199);
+    scale: 1.05;
+}
+
+.calc__buttons-button:active {
+    background-color: rgb(146, 249, 82);
+}
+
+
+.equal {
+    aspect-ratio: auto;
+    grid-column: 4 / 5;
+    grid-row: 4 / 6;
+    background-color: rgb(245, 140, 15);
+}
+
+.equal:hover {
+    background-color: rgb(245, 150, 15);
+}
+
+
+.zero {
+    aspect-ratio: auto;
+    grid-column: 1 / 4;
+}
+
+.backspace, .bin {
+    display: flex;
+
+}
+
+.backspace-image  {
+    scale: 0.45;
+}
+
+.bin-image {
+    scale: 0.35;
+}
+
+
+.backspace.calc__buttons-button:hover, .bin.calc__buttons-button:hover {
+    background-color:  rgb(255, 160, 160);
+}
+
+
+@media (max-width: 500px){
+    .calc__frame {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 500px){
+    .calc__frame-output, .output {
+        font-size: 18px;
+    }
+}
+
+
+
+@media (min-width: 2000px){
+.calc__frame {
+        max-width: 800px; 
+    }
+    .calc__buttons-button {
+        font-size: 64px;
+    }
+    .output, .preview {
+        font-size: 64px;
+    }
+}
+
+
+
+
+
+
+
